@@ -4,8 +4,8 @@ services:
     image: python:3.10
     container_name: recardo-apiserver
     working_dir: /app
-    command: bash -c "pip install -r req.txt && python manage.py makemigrations --noinput && python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000"
+    command: bash -c "pip install -r req.txt && python manage.py makemigrations --noinput && python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8001"
     volumes:
       - ./service:/app
     ports:
-      - "8000:8000"
+      - "8001:8001"
